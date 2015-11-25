@@ -1,10 +1,11 @@
 install:
-  - npm install
+  - npm install --quiet
+  - npm install phantomjs --quiet
 script:
   - npm test
 docker:
   socketPath: /var/run/docker.sock
-images:
+targets:
   ubuntu:
     tags:
       - "14.04"
